@@ -1,0 +1,98 @@
+/* describing the effects applied to the image and the button */
+
+.button {
+  padding: 15px 20px;
+  font-size: 24px;
+  text-align: center;
+  cursor: crosshair;
+  outline: none;
+  color: black;
+  background-color: pink;
+  border: none;
+  border-radius: 12px;
+  box-shadow: -10px 5px 10px blue;
+    transition: 1s ease, color 10s ease-in;
+    margin: 40px auto;
+    display: block;
+}
+
+.button:hover {background-color: rgb(255, 112, 255)}
+
+.button:active {
+  background-color: red;
+  box-shadow: -10px 5px 10px #ffc400;
+  transform: translateX(10px);
+}
+
+img {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+.linking {
+  margin: auto;
+  text-align: center;
+}
+
+.beating-link {
+  display: inline-block; 
+  padding: 5px 10px; 
+  text-decoration: none;
+  color: red;
+  transition: color 0.3s ease-in-out;
+  font-size: 24px;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5); 
+  }
+  40% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.3)
+  }
+  60% {
+    transform: scale(1.5); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
+.beating-link:hover {
+  animation: beat 3s infinite ease-in-out; /* 1s duration, infinite loop, smooth timing */
+  color: #FFA500;
+  text-decoration: underline;
+}
+
+@keyframes FadeIn {
+  0% {
+  opacity: 0;
+  transform: scale(0.5);
+  }
+
+  50% {
+  opacity: 0.5;
+  transform: scale(1);
+  }
+
+  100% {
+  opacity: 1;
+  }
+}
+
+.Fade-In{
+  animation-duration: 5s;
+  animation-name: FadeIn;
+  animation-iteration-count: 2;
+}
+
+body {
+  background-color:aliceblue;
+}
